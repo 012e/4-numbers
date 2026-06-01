@@ -20,6 +20,7 @@
 - Under-5-minute CPU training command: `uv run src/network3_cli.py train --architecture basic-conv --epochs 3 --eta 0.1 --lmbda 0 --fc-neurons 100 --output models/network3-basic-conv-3ep.pkl.gz`.
 - Stronger CPU command when time is acceptable: `uv run src/network3_cli.py train --architecture dbl-conv-relu --epochs 20 --eta 0.03 --lmbda 0.1 --fc-neurons 100 --output models/network3-cpu-good.pkl.gz`.
 - Prediction uses `--invert auto` by default; use `--invert yes` for dark-on-light images if auto-inversion guesses wrong, or `--invert no` for MNIST-like light digit on dark background.
+- Validate one random labeled drawing from `draw_dataset/<digit>/...`: `uv run src/network3_cli.py predict --model models/network3-cpu-good.pkl.gz --random-from draw_dataset`.
 
 ## Training Notes
 - `src/network3_cli.py` architectures are `shallow`, `basic-conv`, `dbl-conv-relu`, and `post`; avoid `post` on CPU unless the user expects a very long run.
