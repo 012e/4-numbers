@@ -1,0 +1,13 @@
+[project]
+name = "neural-networks-and-deep-learning"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "numpy<1.22",
+    "pillow>=12.0.0",
+    "rich>=15.0.0",
+    "scipy<1.9",
+    "theano>=1.0.5",
+]
